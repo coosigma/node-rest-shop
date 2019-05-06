@@ -1,0 +1,8 @@
+GET http://localhost:3000 HTTP/1.1
+content-type: application/json
+
+{
+    "name":"Hendry",
+    "salary":"61888",
+    "age":"26"
+}GET localhost:3000
