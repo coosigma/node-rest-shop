@@ -12,20 +12,7 @@ router.get("/", (req, res, next) => {
 			const response = {
 				count: docs.length,
 				products: docs.map(doc => {
-					return {
-						name: doc.name,
-						price: doc.price,
-						_id: doc._id,
-						request: {
-							type: req.method,
-							url:
-								req.protocol +
-								"://" +
-								req.get("host") +
-								req.originalUrl +
-								doc._id
-						}
-					};
+					return {...doc._doc}
 				})
 			};
 			// if (docs.length > 0) {
