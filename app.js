@@ -14,7 +14,7 @@ mongoose.connect(
 		"@node-rest-shop-7fxig.mongodb.net/test?retryWrites=true",
 	{ useNewUrlParser: true }
 );
-
+mongoose.set("useCreateIndex", true);
 app.use(morgan("dev"));
 app.use("/uploads", express.static("uploads"));
 app.use(bodyParser.urlencoded({ extended: false }));
